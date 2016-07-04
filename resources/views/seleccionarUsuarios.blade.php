@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Asignar usuarios</title>
-		<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}"> <!--asset es para que jale el archivo a cualquier profundidad-->
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 well">
-					<h1>Asignar usuarios a pryectos</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
+@extends('master')
+@section('encabezado')
+<h2>Seleccionar usuarios</h2>
+@stop
+@section('contenido')
 					<form action="{{url('/seleccionarUsuarios')}}" method="POST">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
 						<div class=" form-group">
@@ -57,8 +46,4 @@
 							</tbody>
 						</table>
 					</form>
-				</div>
-			</div>
-		</div>
-	</body>
-</html>
+@stop

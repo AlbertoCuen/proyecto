@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Registro del nuevo usuario</title>
-	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 well">
-				<h1>Registro de usuario</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
+@extends('master')
+@section('encabezado')
+<h2>Registrar usuarios</h2>
+@stop
+@section('contenido')
 				<form action="{{url('/guardarUsuario')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
@@ -33,9 +22,4 @@
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/usuarios')}}" class="btn btn-danger">Cancelar</a>
 				</form>
-			</div>
-		</div>
-	</div>
-
-</body>
-</html>
+@stop

@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Consulta de usuarios</title>
-	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}"> <!--asset es para que jale el archivo a cualquier profundidad-->
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<h1>Lista de usuarios</h1>
+@extends('master')
+@section('encabezado')
+<h1>Seccion de usuarios</h1>
+@stop
+@section('contenido')
 					<a href="{{url('registrarUsuario')}}" class="btn btn-success">Nuevo usuario
 						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 					</a>
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -42,7 +30,4 @@
 						@endforeach
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
-</body>
+@stop

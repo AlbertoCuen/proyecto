@@ -91,4 +91,5 @@ class ejemploController extends Controller
         $dompdf->loadHTML($vista);
         return $dompdf->stream();
     }
+
 }

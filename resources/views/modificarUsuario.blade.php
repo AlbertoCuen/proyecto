@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Modificar usuario</title>
-	<link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}">
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 well">
-				<h1>Modificar usuario</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
+@extends('master')
+@section('encabezado')
+<h2>Modificar usuarios</h2>
+@stop
+@section('contenido')
 				<form action="{{url('actualizarUsuario')}}/{{$usuario->id}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
@@ -31,9 +20,4 @@
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/usuarios')}}" class="btn btn-danger">Cancelar</a>
 				</form>
-			</div>
-		</div>
-	</div>
-
-</body>
-</html>
+@stop
